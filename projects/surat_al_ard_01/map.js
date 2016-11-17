@@ -51,12 +51,15 @@ var sites,
     metropoleLabels; 
 
 // to set radius sizes for different toptypes 
+var mp;
+mp = 5;
+
 var topTypeSizes = d3.map(); 
-topTypeSizes.set('metropoles', 6);
-topTypeSizes.set('capitals', 3); 
-topTypeSizes.set('towns', 2);
-topTypeSizes.set('villages', 2);
-topTypeSizes.set('sites', 1);
+topTypeSizes.set('metropoles', 6 + mp);
+topTypeSizes.set('capitals', 3 + mp); 
+topTypeSizes.set('towns', 2 + mp);
+topTypeSizes.set('villages', 2 + mp);
+topTypeSizes.set('sites', 1 + mp);
 
 function isDefaultTopType(element, index, array) {
 	return ( element.topType == 'metropoles' || 
@@ -427,6 +430,9 @@ function makeNetwork() {
 	flood(network, sourceID);
 }
 
+var cen;
+cen = 15;
+
 function flood(network, source) {
  // make default unreachable
 	var sitesByZone = network.values(); 
@@ -440,11 +446,11 @@ function flood(network, source) {
 			   .filter(function(d) { return d.topURI == s && d.topType != 'waystations'})
 			   .classed('zone5-node', false)
 			   .classed(siteClass, true) 
-			   .attr("r", 4)
+			   .attr("r", cen - i*3)
 			   .style("visibility", "visible");
 		})
 	}
-	g.selectAll('circle.node').filter(function(d) {return d.topURI == source}).attr("r", 10);
+	g.selectAll('circle.node').filter(function(d) {return d.topURI == source}).attr("r", cen);
 	map.on("viewreset", resetMap);
 
 }

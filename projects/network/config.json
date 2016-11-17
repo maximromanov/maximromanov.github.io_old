@@ -8,23 +8,23 @@
     "link": ""
   },
   "text": {
-    "title": "Arabic",
+    "title": "",
     "more": "",
-    "intro": "Test"
+    "intro": ""
   },
   "legend": {
-    "edgeLabel": "Edges",
-    "colorLabel": "Colors",
-    "nodeLabel": "Nodes"
+    "edgeLabel": "# quotations shareed",
+    "colorLabel": "Community",
+    "nodeLabel": "Book"
   },
   "features": {
     "search": true,
-    "groupSelectorAttribute": "Modularity Class",
-    "hoverBehavior": "dim"
+    "groupSelectorAttribute": false,
+    "hoverBehavior": "default"
   },
   "informationPanel": {
     "imageAttribute": false,
-    "groupByEdgeDirection": true
+    "groupByEdgeDirection": false
   },
   "sigma": {
     "graphProperties": {
