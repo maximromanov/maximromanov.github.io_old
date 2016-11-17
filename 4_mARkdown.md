@@ -239,7 +239,7 @@ Most of the in-text elements are already in pre-formatted texts. In most cases, 
 
 ## II.1 Paragraphs and lines (RE: `^# `, `^~~`)
 
-In premodern Arabic texts paragraphs as units are not particularly reliable. Yet, if a certain electronic text reproduces a printed edition, it is worth preserving its division into paragraphs. Each paragraph begins with `#`.
+In premodern Arabic texts paragraphs as units are not particularly reliable. Yet, if a certain electronic text reproduces a printed edition, it is worth preserving its division into paragraphs. Each paragraph begins with a hashtag, `#`.
 
 While EditPad Pro handles large files very well, it has problems with long paragraphs (or, more correctly, lines). For this reason, long paragraphs are split into shorter lines, where each line starts with `~~` (two tildas).
 
@@ -374,7 +374,25 @@ Years AH can be tagged in the following manner (where `#` is a digit; there must
 This pattern is easily adjustable for tagging specific semantic patterns. The overall pattern is `@USER@CAT_SUBCAT_SUBSUBCAT@`, where `USER` is an alias of a researcher introducing a pattern (three-letter initials is an option—`MGR` in my case); `CAT_SUBCAT...` represents categorical branching, where categories are defined by a researcher for specific purposes.
 
 ```
-MGR├── WACZ│   ├── education│   │   ├── quran│   │   ├── hadith│   │   └── fiqh│   └── sermons│       ├── hell│       ├── paradise│       └── love├── KHUTBA│   ├── education│   │   ├── punishmenst│   │   ├── hadith│   │   └── fiqh│   └── sermons│       ├── hell│       ├── paradise│       └── love
+MGR
+├── WACZ
+│   ├── education
+│   │   ├── quran
+│   │   ├── hadith
+│   │   └── fiqh
+│   └── sermons
+│       ├── hell
+│       ├── paradise
+│       └── love
+├── KHUTBA
+│   ├── education
+│   │   ├── punishmenst
+│   │   ├── hadith
+│   │   └── fiqh
+│   └── sermons
+│       ├── hell
+│       ├── paradise
+│       └── love
 └ etc.
 ```
 
